@@ -1,0 +1,25 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Available Inventory</h1>
+      <p>Dozens of items to see and choose.<br>
+        Find what you're looking for and something extra!</p>
+    </div>
+  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group col-md-4 pl-0 mb-3">
+            <input [(ngModel)]="filterText" class="form-control" placeholder="Search by Name or Category">
+            </div>
+            <div class="row">
+            <div class="col-md-4 mb-3" *ngFor="let item of (items | itemSearch: filterText); let i = index">
+                <app-item-card [item]="item" [i]="i"></app-item-card>
+            </div>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+        A sales tax of 10% is applied on all goods except for books, food items, and medical supplies. 
+        An import duty tax is applied to all import items at a rate of 5% with no exemptions.
+        </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="card mb-3" style="width: 16rem;">
+    <img class="card-img-top" src={{item.imageUrl}} alt="Card image cap" height="300px">
+    <div class="card-body">
+        <hr>
+        <span *ngIf="item.imported===true" class="badge badge-pill badge-secondary">Imported</span>
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">{{ item.price | currency }}</p>
+        <input [(ngModel)]="purchaseQuantity" type="number" class="form-control col-4 mb-2 float-left" placeholder="Qty" [max]=10 [min]=0>
+        <button type="button float-right" class="btn btn-dark ml-2" (click)="onAddItemToCart(item)">{{ buttonTitle }}</button>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.jumbotron{
+    background-image: url("src/assets/images/homepage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    
+   }
+
+.jumbotron h1, .card-title{
+    font-family: 'Playfair Display', serif;
+}
+
+.jumbotron p, .card-text {
+    font-family: 'Lato', sans-serif;
+}
